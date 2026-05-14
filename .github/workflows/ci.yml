@@ -23,6 +23,8 @@ jobs:
              
             - name: Build and test
               run: mvn verify
+              env:
+                TESTCONTAINERS_RYUK_DISABLED: true
               
             - name: Build Docker image
               uses: docker/build-push-action@v5
